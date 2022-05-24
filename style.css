@@ -35,7 +35,8 @@ hr{
     padding-right: 10vw;
     justify-content: space-between;
     background-color: rgb(113, 165, 222);
-    color: rgb(230, 223, 223);
+    color: rgb(30, 27, 27);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .main-header > nav > ul{
@@ -44,18 +45,17 @@ hr{
     height: 100%;
     margin: 0;
     align-items: center;
-
 }
 
 .main-header > nav > ul > li{
     display: flex;
-    margin-left: 20px;
+    margin-left: 50px;
     line-height: 100%;
 }
 
 nav{
     display: flex;
-    width: 390px;
+    width: 320px;
     justify-content: space-between;
     align-items: center;
 }
@@ -66,11 +66,17 @@ nav label{
 
 nav a{
     text-decoration: none;
-    color: rgb(230, 223, 223);
+    color: rgb(20, 16, 16);
 }
 
 a:hover{
-    color: rgb(174, 167, 167);
+    color: rgb(111, 108, 108);
+}
+
+#color {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
 }
 
 
@@ -107,16 +113,16 @@ h1{
     text-align: center;
 }
 
-.main-index-section > article > a > img:hover{
-    -webkit-transform:scale(1.15); /* Safari et Chrome */
-    -moz-transform:scale(1.15); /* Firefox */
-    -ms-transform:scale(1.15); /* Internet Explorer 9 */
-    -o-transform:scale(1.15); /* Opera */
-    transform:scale(1.15);
+.main-index-section > article > a > img:hover, .scale:hover{
+    -webkit-transform:scale(1.1); /* Safari et Chrome */
+    -moz-transform:scale(1.1); /* Firefox */
+    -ms-transform:scale(1.1); /* Internet Explorer 9 */
+    -o-transform:scale(1.1); /* Opera */
+    transform:scale(1.1);
     border-radius: 10px;
 }
 
-.main-index-section > article > a > img{
+.main-index-section > article > a > img, .scale{
     height: 300px;
     width: 100%;
     border-radius: 10px 10px 0 0;
@@ -155,9 +161,48 @@ h1{
 
 
 
-@keyframes test {
-    0%{width: 640px; top: 0; left: -0;}
-    50%{left: -20px;height: 340px;width: 680px; }
-    75%{top: -10px}
-    100%{border-radius: 10px;}
+
+
+
+
+/* ##################
+          ABOUT
+   ################## */
+
+
+.about-section{
+    margin: auto !important;
 }
+
+.about-article{
+    margin-top: 50px !important;
+    height: 200px !important;
+    padding: 1em !important;
+}
+
+
+
+.carrou{
+    display: flex;
+}
+
+.carrou-nav{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: 15px;
+}
+
+#c1 {
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+

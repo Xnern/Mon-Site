@@ -1,44 +1,39 @@
-const colorPicker = document.getElementById('color');
+const div = document.querySelector('article');
 
-colorPicker.addEventListener("input", update, false);
+const h3 = document.querySelector('h3');
 
+const p1 = document.getElementById('p1');
+const p2 = document.getElementById('p2');
+const p3 = document.getElementById('p3');
 
-function update(event){
-    
-    document.querySelectorAll("article").forEach(function(a){
-        
-        a.style.backgroundColor = event.target.value;
-        console.log(event.target.value)
-        if(event.target.value === "#ffffff"){
-            document.querySelectorAll('.legende').forEach(legende =>
-                legende.style.color = "black");
-            document.querySelectorAll('li').forEach(li =>
-                    li.style.color = "black");
-            document.querySelectorAll('a').forEach(a =>
-                a.style.color = "black");
-            document.querySelectorAll('h4').forEach(h4 =>
-                h4.style.color = "black");
-            document.querySelectorAll('label').forEach(label =>
-                label.style.color = "black");
-        }
+const c1 = document.getElementById('c1');
+const c2 = document.getElementById('c2');
+const c3 = document.getElementById('c3');
 
-        if(event.target.value === "#000000"){
-            document.querySelectorAll('.legende').forEach(legende =>
-                legende.style.color = "white");
-            
-            document.querySelectorAll('li').forEach(li =>
-                    li.style.color = "white");
-            document.querySelectorAll('a').forEach(a =>
-                a.style.color = "white");
-            document.querySelectorAll('h4').forEach(h4 =>
-                h4.style.color = "white");
-            document.querySelectorAll('label').forEach(label =>
-                label.style.color = "white");                
-        }
-        
-    });
+click = 1;
 
-    document.querySelectorAll('.main-header').forEach(function(a){
-        a.style.backgroundColor = event.target.value;
-    })
-}
+div.addEventListener("click", () => {
+    if (click === 1) {
+        click= 2;
+        h3.innerText = "Mon expérience"; 
+        div.style.backgroundColor = "rgb(40, 174, 102)"; 
+        p1.innerText = "Bon";
+        c2.style.backgroundColor = "black";
+        c1.style.backgroundColor = "white";
+    }
+    else if(click === 2){
+        h3.innerText = "Qui suis-je ?";
+        click= 3;
+        div.style.backgroundColor = "rgb(113, 165, 222)"; 
+        c3.style.backgroundColor = "black";
+        c2.style.backgroundColor = "white";
+    }
+    else if(click === 3){
+        h3.innerText = "Qui suis-je ?";
+        click= 1;
+        div.style.backgroundColor = "rgb(113, 165, 222)"; 
+        c1.style.backgroundColor = "black";
+        c3.style.backgroundColor = "white";
+    }
+
+});
